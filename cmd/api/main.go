@@ -13,7 +13,8 @@ func main() {
 		config: cfg,
 	}
 
-	err := app.start()
+	mux := app.mountRouts()
+	err := app.start(mux)
 	if err != nil {
 		log.Fatal(err)
 	}
