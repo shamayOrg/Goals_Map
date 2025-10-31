@@ -1,12 +1,13 @@
 package main
 
 import (
+	"goals_map/internal/env"
 	"log"
 )
 
 func main() {
 	cfg := config{
-		port: "8080",
+		port: env.GetEnv("PORT", "8080"),
 	}
 
 	app := &application{
