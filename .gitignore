@@ -10,3 +10,5 @@ coverage/
 .DS_Store
 # Env files
 env.go
+# Air build output
+tmp/
